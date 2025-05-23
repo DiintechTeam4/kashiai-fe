@@ -1,0 +1,262 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 0.9rem 1.5rem;
+  background-color: #ff1100;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin: 0 0.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-links a:hover {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Hamburger menu */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.gallery Link:hover{
+  color: blue;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  outline: none;
+}
+.desktopNav {
+  width: 100%;
+}
+
+.desktop {
+  width: 100%;
+  height: 80px;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff1100;
+  box-shadow: 0px 10px 0px 0px rgb(255, 255, 255);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+}
+.links:hover {
+  color: black;
+}
+.navbar {
+  display: none;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+}
+.desktopNavSearch {
+  display: flex;
+  width: 100%;
+  /* padding: 0px 5px 0px 20px; */
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: 40px;
+  max-width: 300px;
+}
+
+.desktopNavSearchButton {
+  border: none;
+  background-color: transparent;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.desktopNavSearchInput {
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none;
+  padding-left: 20px;
+  color: white;
+}
+.desktopNavSearchInput::placeholder {
+  color: white;
+}
+.desktopNavList {
+  display: flex;
+  list-style: none;
+  /* margin-top: -15px; */
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 50px;
+}
+li:hover{
+  color: blue;
+  cursor: pointer;
+}
+.desktopNavList > li {
+  margin: 0px 10px;
+}
+.desktopNavLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+.desktopNavListSecond {
+  margin: 0px;
+  display: flex;
+  padding: 10px;
+  list-style: none;
+}
+.desktopNavListSecond > li {
+  margin: 0px 10px;
+  color: white;
+}
+.admim_text{
+  display: flex;
+  width: 100px;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  margin-top: -29px;
+  height: 30px;
+  color: white;
+  font-weight: normal;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 30px 0px rgb(255, 255, 255);
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+  .desktop {
+    display: none;
+    z-index: 100;
+  }
+  .navbar {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toggle-button {
+    margin-top: 40px;
+    display: flex;
+    align-self: flex-start;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    width: 100%;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+    align-self: flex-start;
+  }
+  .mobileNavList > li {
+    margin: 15px 0px;
+  }
+}
+/* --------for large screen--------------- */
+
+@media (max-width: 1240px) {
+  .desktopNavList {
+    /* display: none; */
+    font-size: 15px;
+    padding-left: 15px;
+    /* z-index: 100; */
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    align-self: flex-start;
+    font-size: 10px;
+  }
+}
+
+.desktopNavIconContainer{
+  display: flex;
+  color: white;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}

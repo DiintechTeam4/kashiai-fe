@@ -1,0 +1,889 @@
+/* Base Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+  transition: all linear 0.3s;
+}
+
+.firstSectionTextContainer {
+  width: 100%;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.firstSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.firstSectionTitle {
+  font-size: 25px;
+  line-height: 33px;
+  text-transform: uppercase;
+  padding-top: 5%;
+  text-align: left;
+}
+
+.firstSectionTitle p{
+  text-align: left;
+  text-align-last: left;
+}
+
+.firstSectionButton {
+  /* background-color: #ff1100; */
+  color: white;
+  border: none;
+  /* padding: 15px 30px; */
+  font-size: 16px;
+  /* margin-top: 20px; */
+  transition: all 0.3s ease;
+  font-size: 10px;
+  cursor: pointer;
+  display: block;
+  margin-left: 40%;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstSectionButton:hover {
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+.parallax {
+  background-image: url("/public/Kashi_Vishvanath_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5em 1.5em 5em 1.5em;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.secondSectionTitle {
+  font-size: 25px;
+  line-height: 35px;
+  color: white;
+  text-align: left;
+}
+
+.secondSectionButton {
+  background-color: #ff1100;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.secondSectionButton:hover {
+  transition: all 0.3s ease;
+  background-color: white;
+  color: black;
+}
+
+.ThirdSection {
+  margin: 80px 0px;
+}
+
+.thirdSectionTitleContainer {
+  padding: 23px 20px 15px 20px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.thirdSectionTitle {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 45px;
+  letter-spacing: 0.64px;
+  font-family: Poppins;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.thirdSectionTitleh6 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.thirdSectionContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.thirdSectionImageContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thirdSectionImage {
+  width: 100%;
+  height: auto;
+}
+
+.thirdSectionTextContainer {
+  text-align: center;
+}
+
+.thirdSectionText,
+.thirdSectionTextRight {
+  padding: 10px;
+}
+
+.thirdSectionText h1,
+.thirdSectionTextRight h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.thirdSectionText p,
+.thirdSectionTextRight p {
+  color: rgb(36, 36, 36);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/* Animation Styles */
+/* .e2 {
+  width: 100%;
+  background: none;
+  text-align: center;
+  padding-left: 40px;
+  margin-left: -35%;
+  margin-top: -10%;
+} */
+
+/* .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: absolute;
+  z-index: -1;
+} */
+
+/* .boxA {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  margin-top: -1px;
+  border: 2px solid black;
+} */
+
+/* .boxC {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: none;
+  z-index: -1;
+  border: 1px solid rgb(121, 121, 121);
+  opacity: 0.4;
+} */
+
+/* .box2,
+.box3,
+.box4,
+.box5 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} */
+
+/* .box2 {
+  background-color: green;
+  animation-name: circleA;
+} */
+
+/* .box3 {
+  background-color: rgb(9, 255, 0);
+  animation-name: circleB;
+} */
+
+/* .box4 {
+  background-color: rgb(0, 8, 255);
+  animation-name: circleC;
+} */
+
+/* .box5 {
+  background-color: rgb(0, 255, 238);
+  animation-name: circleD;
+} */
+
+/* @keyframes circleA {
+  0% {
+    transform: rotate(0deg) translate(250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(250px) rotate(-360deg);
+  }
+} */
+
+/* @keyframes circleB {
+  0% {
+    transform: rotate(0deg) translateY(-250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-250px) rotate(-360deg);
+  }
+}
+
+@keyframes circleC {
+  0% {
+    transform: rotate(0deg) translate(-250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-250px) rotate(-360deg);
+  }
+}
+
+@keyframes circleD {
+  0% {
+    transform: rotate(0deg) translateY(250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(250px) rotate(-360deg);
+  }
+} */
+
+.right {
+  display: flex;
+  width: 550px;
+  height: 400px;
+  padding-left: 180px;
+  margin-top: 45px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (Mobile Devices) */
+@media screen and (max-width: 768px) {
+  .firstSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .firstSection img{
+    margin-top: 100px;
+    margin-bottom: -50px;
+  }
+
+  .firstSectionTextContainer {
+    width: 100%;
+    padding: 20px;
+    background: white;
+  }
+
+  .firstSectionTitle {
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+  .firstSectionButton{
+    margin-left: 80px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .parallax {
+    height: 300px;
+    padding: 2em 1em;
+  }
+
+  .secondSectionTitle {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .thirdSectionContainer {
+    flex-direction: column;
+  }
+
+  .thirdSectionImageContainer {
+    width: 100%;
+  }
+
+  .thirdSectionTextContainer {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-left: -20px;
+  }
+  
+}
+
+  /* .boxA {
+    width: 120px;
+    height: 120px;
+  } */
+
+  /* .boxC {
+    width: 200px;
+    height: 200px;
+  } */
+
+  /* .box2,
+  .box3,
+  .box4,
+  .box5 {
+    width: 40px;
+    height: 40px;
+  } */
+/* 
+  @keyframes circleA {
+    0% {
+      transform: rotate(0deg) translate(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleB {
+    0% {
+      transform: rotate(0deg) translateY(-100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleC {
+    0% {
+      transform: rotate(0deg) translate(-100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleD {
+    0% {
+      transform: rotate(0deg) translateY(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(100px) rotate(-360deg);
+    }
+  }
+} */
+
+/* For screens between 768px and 1024px (Tablets) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .firstSection {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .firstSectionTextContainer {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .firstSectionTitle {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .imageContainer {
+    width: 50%;
+  }
+
+  .parallax {
+    height: 400px;
+  }
+
+  .secondSectionTitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .thirdSectionContainer {
+    flex-direction: row;
+  }
+
+  .thirdSectionImageContainer {
+    width: 50%;
+  }
+
+  .thirdSectionTextContainer {
+    width: 50%;
+  }
+
+  .right {
+    width: 100%;
+    padding-left: 50px;
+    margin-top: 20px;
+  }
+}
+
+  /* .boxA {
+    width: 140px;
+    height: 140px;
+  } */
+
+  /* .boxC {
+    width: 250px;
+    height: 250px;
+  } */
+
+  /* .box2,
+  .box3,
+  .box4,
+  .box5 {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes circleA {
+    0% {
+      transform: rotate(0deg) translate(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleB {
+    0% {
+      transform: rotate(0deg) translateY(-120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleC {
+    0% {
+      transform: rotate(0deg) translate(-120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleD {
+    0% {
+      transform: rotate(0deg) translateY(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(120px) rotate(-360deg);
+    }
+  }
+} */
+
+/* For screens larger than 1024px (Desktops) */
+@media screen and (min-width: 1024px) {
+  .firstSection {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .firstSectionTextContainer {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .firstSectionTitle {
+    font-size: 35px;
+    line-height: 58px;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  .imageContainer {
+    width: 50%;
+  }
+
+  .parallax {
+    height: 500px;
+  }
+
+  .secondSectionTitle {
+    font-size: 65px;
+    line-height: 75px;
+  }
+
+  .thirdSectionContainer {
+    flex-direction: row;
+  }
+
+  .thirdSectionImageContainer {
+    width: 50%;
+  }
+
+  .thirdSectionTextContainer {
+    width: 50%;
+  }
+
+  .right {
+    width: 550px;
+    padding-left: 180px;
+    margin-top: 45px;
+  }
+
+  /* .boxA {
+    width: 300px;
+    height: 300px;
+  } */
+
+  /* .boxC {
+    width: 500px;
+    height: 500px;
+  } */
+
+  /* .box2,
+  .box3,
+  .box4,
+  .box5 {
+    width: 80px;
+    height: 80px;
+  } */
+}
+
+/* --------------nmq------------- */
+
+/* Animation Container */
+.e2 {
+  width: 100%;
+  background: none;
+  text-align: center;
+  padding-left: 0;
+  margin-left: -23%;
+  margin-top: -15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation Boxes */
+.boxA {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.boxC {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: none;
+  z-index: -2;
+  border: 1px solid rgb(121, 121, 121);
+  opacity: 0.4;
+  position: absolute;
+}
+
+.box2,
+.box3,
+.box4,
+.box5 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.box2 {
+  background-color: green;
+  animation-name: circleA;
+}
+
+.box3 {
+  background-color: rgb(9, 255, 0);
+  animation-name: circleB;
+}
+
+.box4 {
+  background-color: rgb(0, 8, 255);
+  animation-name: circleC;
+}
+
+.box5 {
+  background-color: rgb(0, 255, 238);
+  animation-name: circleD;
+}
+
+/* Keyframes for Animation */
+@keyframes circleA {
+  0% {
+    transform: rotate(0deg) translate(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(150px) rotate(-360deg);
+  }
+}
+
+@keyframes circleB {
+  0% {
+    transform: rotate(0deg) translateY(-150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-150px) rotate(-360deg);
+  }
+}
+
+@keyframes circleC {
+  0% {
+    transform: rotate(0deg) translate(-150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-150px) rotate(-360deg);
+  }
+}
+
+@keyframes circleD {
+  0% {
+    transform: rotate(0deg) translateY(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(150px) rotate(-360deg);
+  }
+}
+
+/* Media Queries for Responsive Animations */
+
+/* For screens smaller than 768px (Mobile Devices) */
+@media screen and (max-width: 768px) {
+  .e2{
+    margin-left: 8%;
+  }
+  .boxA {
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+  }
+
+  .boxC {
+    z-index: -2;
+    width: 200px;
+    height: 200px;
+  }
+
+  .box2,
+  .box3,
+  .box4,
+  .box5 {
+    width: 40px;
+    height: 40px;
+  }
+
+  @keyframes circleA {
+    0% {
+      transform: rotate(0deg) translate(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleB {
+    0% {
+      transform: rotate(0deg) translateY(-100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleC {
+    0% {
+      transform: rotate(0deg) translate(-100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-100px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleD {
+    0% {
+      transform: rotate(0deg) translateY(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(100px) rotate(-360deg);
+    }
+  }
+}
+
+/* For screens between 768px and 1024px (Tablets) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxA {
+    z-index: -1;
+    width: 120px;
+    height: 120px;
+  }
+
+  .boxC {
+    z-index: -2;
+    width: 250px;
+    height: 250px;
+  }
+
+  .box2,
+  .box3,
+  .box4,
+  .box5 {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes circleA {
+    0% {
+      transform: rotate(0deg) translate(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleB {
+    0% {
+      transform: rotate(0deg) translateY(-120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleC {
+    0% {
+      transform: rotate(0deg) translate(-120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleD {
+    0% {
+      transform: rotate(0deg) translateY(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(120px) rotate(-360deg);
+    }
+  }
+}
+
+/* For screens larger than 1024px (Desktops) */
+@media screen and (min-width: 1024px) {
+  .boxA {
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+  }
+
+  .boxC {
+    z-index: -2;
+    width: 450px;
+    height: 450px;
+  }
+
+  .box2,
+  .box3,
+  .box4,
+  .box5 {
+    width: 90px;
+    height: 90px;
+  }
+
+  @keyframes circleA {
+    0% {
+      transform: rotate(0deg) translate(230px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(230px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleB {
+    0% {
+      transform: rotate(0deg) translateY(-230px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(-230px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleC {
+    0% {
+      transform: rotate(0deg) translate(-230px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(-230px) rotate(-360deg);
+    }
+  }
+
+  @keyframes circleD {
+    0% {
+      transform: rotate(0deg) translateY(230px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(230px) rotate(-360deg);
+    }
+  }
+}

@@ -1,0 +1,171 @@
+Query:				by:- MANOJ
+There is a table named CUSTOMER (ID, Name, DOR). Write the sql
+query to display all the customer details. (Note – Early Date of
+registration must be displayed first
+
+Answer:
+SELECT * FROM CUSTOMER
+ORDER BY DOR ASC;
+
+Query:
+Write the SQL command to Create the table named STUDENT
+Column Name 	Data Type 		Size Remark
+Roll 	    	Number(5)  	Primary Key, must start with ‘S’
+Name        	Varchar2(25) 	Null values are not allowed
+DOB 		Date
+Email 		Varchar2 (30) 	Must take unique values only
+DOR 		Date 		Must not less than DOB 
+
+Answer:
+CREATE TABLE STUDENT (
+  Roll_Number VARCHAR2(5) PRIMARY KEY,
+  Name VARCHAR2(25) NOT NULL,
+  DOB DATE,
+  Email VARCHAR2(30) UNIQUE,
+  DOR DATE CHECK (DOR >= DOB),
+  CHECK (Roll_Number LIKE 'S%')
+);
+
+
+Query:
+Find out the tables named EMP(Id, Name, DOJ, DeptID, Salary),
+Dept(DeptId, Name, Location)
+Write the SQL query for the following
+a) Display the employee details along with the department name
+where the employee is working.
+b) Display the employees according to date of joining. (Recent
+joins should come first)
+c) Display the number of employees working in \MCA
+Department.
+d) Display the employee names whose name starts with ‘Ra’. 
+e) Display the employees who are getting more salary than what
+‘Rohan’ is getting.
+
+
+Answer:
+a) Display the employee details along with the department name where the employee is working:
+
+SELECT (link unavailable), E.Name, E.DOJ, E.DeptID, E.Salary, D.Name AS DeptName
+FROM EMP E
+INNER JOIN Dept D ON E.DeptID = D.DeptID;
+
+b) Display the employees according to date of joining (Recent joins should come first):
+
+SELECT *
+FROM EMP
+ORDER BY DOJ DESC;
+
+c) Display the number of employees working in 'MCA' Department:
+
+SELECT COUNT(*)
+FROM EMP E
+JOIN Dept D ON E.DeptID = D.DeptID
+WHERE D.Name = 'MCA';
+
+d) Display the employee names whose name starts with 'Ra':
+
+SELECT Name
+FROM EMP
+WHERE Name LIKE 'Ra%';
+
+e) Display the employees who are getting more salary than what 'Rohan' is getting:
+
+SELECT *
+FROM EMP
+WHERE Salary > (SELECT Salary FROM EMP WHERE Name = 'Rohan');
+
+Query:
+Create a table Employee(Emp_id, Emp_name, Emp_add, Emp_basicpay) and insert
+some records in it. Create another table Emp_detail(Emp_name, Emp_add) from
+Employee table by using SELECT statement. 
+
+Answer:
+CREATE TABLE Employee (
+  Emp_id Number(5),
+  Emp_name VARCHAR2(255),
+  Emp_add VARCHAR2(255),
+  Emp_basicpay Number(5)
+);
+
+INSERT INTO Employee VALUES
+  (1, 'John Doe', 'New York', 5000);
+INSERT INTO Employee VALUES
+  (2, 'Jane Smith', 'Los Angeles', 6000);
+INSERT INTO Employee VALUES
+  (3, 'Bob Johnson', 'Chicago', 7000);
+INSERT INTO Employee VALUES
+  (4, 'Alice Brown', 'Houston', 8000);
+
+CREATE TABLE Emp_detail AS
+SELECT Emp_name, Emp_add
+FROM Employee;
+
+Query:
+Create the tables Supplier(SNo, SName, City), Parts(PNo, Pname, Color, City), and
+Shipment(SNo, PNo, Quantity). Answer the following queries :
+(i) Get the total number of suppliers.
+(ii) Get the total number of suppliers currently supplying parts.
+(iii) Get part numbers of all parts supplied.
+(iv) Change the color of parts from red to black. 
+
+Answer:
+CREATE TABLE Supplier (
+  SNo Number(5),
+  SName VARCHAR2(255),
+  City VARCHAR2(255)
+);
+
+CREATE TABLE Parts (
+  PNo Number(5),
+  Pname VARCHAR2(255),
+  Color VARCHAR2(255),
+  City VARCHAR2(255)
+);
+
+CREATE TABLE Shipment (
+  SNo Number(5),
+  PNo Number(5),
+  Quantity Number(5)
+);
+
+INSERT INTO Supplier VALUES
+  (1, 'Supplier 1', 'City 1');
+INSERT INTO Supplier VALUES
+  (2, 'Supplier 2', 'City 2');
+INSERT INTO Supplier VALUES
+  (3, 'Supplier 3', 'City 3');
+
+INSERT INTO Parts VALUES
+  (1, 'Part 1', 'Red', 'City 1');
+INSERT INTO Parts VALUES
+  (2, 'Part 2', 'Blue', 'City 2');
+INSERT INTO Parts VALUES
+  (3, 'Part 3', 'Red', 'City 3');
+
+INSERT INTO Shipment VALUES
+  (1, 1, 10);
+INSERT INTO Shipment VALUES
+  (1, 2, 20);
+INSERT INTO Shipment VALUES
+  (2, 3, 30);
+
+(i) Get the total number of suppliers:
+
+SELECT COUNT(*) AS Total_Suppliers
+FROM Supplier;
+
+(ii) Get the total number of suppliers currently supplying parts:
+
+SELECT COUNT(DISTINCT SNo) AS Total_Supplying_Suppliers
+FROM Shipment;
+
+(iii) Get part numbers of all parts supplied:
+
+SELECT DISTINCT PNo
+FROM Shipment;
+
+(iv) Change the color of parts from red to black:
+
+UPDATE Parts
+SET Color = 'Black'
+WHERE Color = 'Red';

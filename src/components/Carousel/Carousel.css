@@ -1,0 +1,148 @@
+.sliderDotContainer{
+  margin-top: 100px;
+}
+.sliderDotContainer img{
+  box-shadow: -2px 0px 10px 4px rgb(90, 90, 90);
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #2d1b4e; */
+  /* padding: 80px 80px 80px 80px; */
+  position: relative;
+  /* min-height: 400px; */
+  max-height: 600px;
+  width: 100% !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  /* box-sizing: border-box; */
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.book-cover {
+  flex-shrink: 0;
+  width: 300px;
+  height: 450px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+  transform: scale(1.05);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+blockquote {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0 0 2rem 0;
+  font-family: "Times New Roman", serif;
+}
+
+.author {
+  margin-bottom: 2rem;
+}
+
+.author-name {
+  color: #4ac6d6;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.author-title {
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+.nav-button {
+  background: none;
+  background-color: #ff1100;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  /* padding-bottom: 5px; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Smooth fade transition for slides */
+.slide {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 200px;
+    height: 300px;
+  }
+
+  blockquote {
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  .nav-button {
+    width: 20px;
+    height: 20px;
+  }
+}
